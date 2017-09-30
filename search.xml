@@ -87,15 +87,15 @@
   
     
     <entry>
-      <title><![CDATA[about me]]></title>
-      <url>/blog/about/index.html</url>
-      <content type="html"><![CDATA[<h2 id="Java程序员"><a href="#Java程序员" class="headerlink" title="Java程序员"></a>Java程序员</h2>]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[timeline]]></title>
       <url>/blog/timeline/index.html</url>
       <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[about me]]></title>
+      <url>/blog/about/index.html</url>
+      <content type="html"><![CDATA[<h2 id="Java程序员"><a href="#Java程序员" class="headerlink" title="Java程序员"></a>Java程序员</h2>]]></content>
     </entry>
     
   
