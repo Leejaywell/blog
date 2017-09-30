@@ -12,7 +12,7 @@
     
     <title>
         
-            Hello World | 
+            Java基础之ClassLoader | 
         
         时光-流沙
     </title>
@@ -65,18 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://leejaywell.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hello World | 时光-流沙">
+    <meta property="og:title" content="Java基础之ClassLoader | 时光-流沙">
     <meta property="og:image" content="/blog/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
-        <meta property="article:published_time" content="8月 30, 2017" />
+        <meta property="article:published_time" content="9月 30, 2017" />
         <meta property="article:modified_time" content="9月 30, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Hello World | 时光-流沙">
+    <meta name="twitter:title" content="Java基础之ClassLoader | 时光-流沙">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/blog/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -84,7 +84,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://leejaywell.github.io/blog/2017/08/30/hello-world/index.html" />
+        <link rel="canonical" href="https://leejaywell.github.io/blog/blog2017/09/30/Java-ClassLoader/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -110,9 +110,9 @@
         },
         "description": "Hi, nice to meet you"
     },
-    "headline": "Hello World",
-    "url": "https://leejaywell.github.io/blog/2017/08/30/hello-world/index.html",
-    "datePublished": "8月 30, 2017",
+    "headline": "Java基础之ClassLoader",
+    "url": "https://leejaywell.github.io/blog/blog2017/09/30/Java-ClassLoader/index.html",
+    "datePublished": "9月 30, 2017",
     "dateModified": "9月 30, 2017",
     "description": "",
     "mainEntityOfPage": {
@@ -327,7 +327,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Java基础之ClassLoader"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java基础之ClassLoader</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-简介"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">1.1 简介</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-ClassLoader结构简述"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">1.2 ClassLoader结构简述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-ClassLoader加载机制"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">1.3 ClassLoader加载机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-class加载过程"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">1.4 class加载过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-4-1-类的主动使用"><span class="post-toc-number">1.0.4.0.1.</span> <span class="post-toc-text">1.4.1 类的主动使用</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-4-2-分析Class-forName-和ClassLoader-loadClass"><span class="post-toc-number">1.0.4.0.2.</span> <span class="post-toc-text">1.4.2 分析Class.forName()和ClassLoader.loadClass()</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -365,7 +365,7 @@
         
     
             <p class="article-headline-p">
-                Hello World
+                Java基础之ClassLoader
             </p>
         </div>
 
@@ -384,7 +384,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Lee</strong>
-        <span>8月 30, 2017</span>
+        <span>9月 30, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -406,7 +406,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACX0lEQVR42u3aQXKDQAwEQP//08kDUuCRBAp2NSdXCpvtPbDKSK+fr75eeHh4eHh4eHh4D+O94uvvt44+J/fn3yqvDQ8PD2+F9+ZVe3DP0WPO/37+eb42PDw8vE1evqzzBydLPz8kemvDw8PD+yxerwTPtwYPDw/vO3jnpPz3DxeKh4eH93je/GU9KaarRwgeHh7e//LyJtP+59X+Hh4eHl7AK480FccLJuX4BUNXeHh4eDfweo/vDWOdhw5XbQceHh7e3byEWr0/HzzNm2rJqAEeHh7eDq8aCkzK7vwwyKPk8rmHh4eHdxEvHwLoNbomsWy53MfDw8O7mZeHBUmxm48IJBvXfCIeHh7eCu8ck98/iSGqm9gcHcDDw8Mb83oBa7UZVg0aegEuHh4e3g6vupTRK3vQMCusDQ8PD2+RNwkCRgsal914eHh4m7y8lVUNdqsbUR26KoQReHh4eDfzqg3++ahWL/yNSmo8PDy8G3i95lZ1Qcn25Xe++QcADw8Pb4U3GTmthsJ5vJvHJXh4eHibvGpsmhfikzurjTQ8PDy8fV6vkM2Pk3wEYTKagIeHh7fP67W4qkMG+fHTjEXw8PDwHsC7tsVVHWNNhrHw8PDwNnnV66rYolqIFwZY8fDw8G7mTZr0ediaRxL5gVRugOHh4eFdypsHAXmokWzrJLzAw8PD2+RV2/+9Q+KqMAIPDw/vE3mTkYJ8GKvakMPDw8N7Mq8HSArrScyBh4eHt8mrNqV6IwK9gdelGBcPDw/vhgZYr6SeRLTlgBgPDw/vZt73XXh4eHh4eHh4eA+4fgGjv1PvvmAXdgAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC2UlEQVR42u3aQXICMQwEQP7/aXLNISwzFinA7j2lYLO4TVUmkny7H3ndsLGxsbGxsbGxsT+SfYuv3/f/8dAH9z+659G716taWzM2Njb2Cewnf/qDhV7jk1eSrZmsGRsbG/sEdh5aSaQl4OvPut6aes3Y2NjY2JeMtuTIn5CvBxsbGxs7/5g8YNpgw8bGxsaesJMGzSTekobRvPjBxsbGPpO9Nuh9789vm29jY2Njfxi7vfIyYG2hbVAVK8fGxsbelD0/CtketWmHDXncvqACw8bGxv5Cdh5LefsmaQ+1gPbriXIbGxsbeyN227hZC798ADD/XWxsbOxz2JM4aUuIpLTI70lewcbGxj6BnUTOk0ONgzFAXvZMvhJsbGzsE9iTELregsnvtvFWjwewsbGxt2Dnj26bTXnU5Vu2tjXY2NjYJ7CTpsxaoycvKtYiqiiZsLGxsTdlt8drktb8WtM/h+WvY2NjY5/DTsa3SaGSx14+eEi2JhoqY2NjYx/Azls/yZGdeWOoLVGKphI2Njb2duy1gGnLhglyLSCxsbGxT2Dn0dIG1aQ9lG9cMZbAxsbG3pSdB8BkWfnT8uNEbeBhY2Njn8POPzhv0yejhdfGGzY2NvY57Paf+/zD2uJhfkAHGxsbGzsZ9LbDgDwg2yFEsq3Y2NjY57Dvgys5WJNHZh6BbWsJGxsbe1f2pCzJm/j5MGAtDrGxsbGx57G09rS87EmeWZQi2NjY2Buxb/E1ib35sZ72CCY2Njb2Oey1FtJkeJCXE+2hnyd3YmNjY2/KbmNm/m67iZPmFDY2NvY57Dy08qBqG0mTAPuXIzvY2NjYX8hOHpG3ja4Dpj18sxa02NjY2NhJyLVtpnZD82h80mzCxsbGxo6Py7TR1a5k7SARNjY29gnseVNpfhhorUWVBBs2Njb23uxJsyaPnLYhtTbiffgcbGxs7E3Z51zY2NjY2NjY2NjYH3P9AGuPpLckufjuAAAAAElFTkSuQmCC">
     
 </ul>
     
@@ -435,7 +435,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hello World&url=https://leejaywell.github.io/blog/2017/08/30/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java基础之ClassLoader&url=https://leejaywell.github.io/blog/blog2017/09/30/Java-ClassLoader/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,7 +453,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://leejaywell.github.io/blog/2017/08/30/hello-world/index.html&title=Hello World" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://leejaywell.github.io/blog/blog2017/09/30/Java-ClassLoader/index.html&title=Java基础之ClassLoader" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -462,7 +462,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=时光-流沙&title=Hello World&summary=&pics=https://leejaywell.github.io/blog/img/favicon.png&url=https://leejaywell.github.io/blog/2017/08/30/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=时光-流沙&title=Java基础之ClassLoader&summary=&pics=https://leejaywell.github.io/blog/img/favicon.png&url=https://leejaywell.github.io/blog/blog2017/09/30/Java-ClassLoader/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -480,16 +480,63 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h4 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h4><h6 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h6 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h6 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h6 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <blockquote>
+<h2 id="Java基础之ClassLoader"><a href="#Java基础之ClassLoader" class="headerlink" title="Java基础之ClassLoader"></a>Java基础之ClassLoader</h2><h4 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h4><p>开发人员对Java.lang.ClassNotFoundExeption这个异常肯定都不陌生，想要详细了解和解决这个问题，<br>  这涉及到Java技术体系中的类加载技术。<br>Java的类加载机制是其体系中比较核心的部分，虽然和大部分开发人员直接打交道不多，但是对其背后的有一定的理解有助于排查程序中出现类加载失败等技术问题，对于理解Java虚拟机的连接模型和<br>  Java语言的动态性都有很大的帮助。</p>
+<h4 id="1-2-ClassLoader结构简述"><a href="#1-2-ClassLoader结构简述" class="headerlink" title="1.2 ClassLoader结构简述"></a>1.2 ClassLoader结构简述</h4><p>JVM中预定义了三种类加载器，当一个JVM实例启动的时候，JVM缺省开始使用如下三种类型的类加载器：</p>
+<blockquote>
+<p><strong>启动（Boostrap）类加载器</strong>：引导类装载器是由本地代码实现的类加载器，其负责<java_runtime_home>/lib下面的核心类库或者可以使用<br>    jvm参数-Xbootclasspath选项指定的jar包加载到内存中。<strong>由于引导类加载器涉及到虚拟机本地实现细节，<br>    开发者无法直接获取到启动类加载的引用，所以不允许直接引用进行操作。</strong><br><strong>扩展（Extension）类加载器</strong>：扩展类加载是由Sun的ExtClassLoader（Sun.misc.Launcher$ExtClassLoader）实现的。其负责<br>    将<java_runtime_home>/lib/ext或者由JVM参数-Djava.ext.dir指定位置中的类加载到内存中。开发者可以直接使用标准扩展类记载其。<br><strong>系统（System）类加载</strong>：系统类加载器是由Sun的AppClassLoader（Sun.misc.Launcher$AppClassLoader）是实现的。<br>    其负责将系统类路径java -classpath或-Djava.class.path变量所指的目录下的类库加载到内存中。开发者可以直接使用系统加载器。</java_runtime_home></java_runtime_home></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><strong><em>除了以上列举的三种类加载器，还有一种比较特殊的类型就是线程上下文类加载器</em></strong></li>
+</ul>
+<p><strong>关系图</strong></p>
+<center><br>    <img src="classloader-model.png" height="350" width="600"><br><br></center>
 
+
+<blockquote>
+<h4 id="1-3-ClassLoader加载机制"><a href="#1-3-ClassLoader加载机制" class="headerlink" title="1.3 ClassLoader加载机制"></a>1.3 ClassLoader加载机制</h4><p>JVM在加载类的时候默认是采用的是双亲委派机制，通俗的说，<strong>就是某个特定的类加载器在接到类加载的请求时，首先将加载的任务委托给父类加载器，依次类推，如果父类加载器可以完成类加载任务，就成功返回，如果父类加载器无法完成此加载任务时，才自己去加载。</strong> 对于这种加载机制，可以从系统类加载器和扩展类加载器为例简单分析：</p>
+</blockquote>
+<center><br>    <img src="extclassloader.png"><br><br>    1.扩展类加载器继承关系图<br></center>
+
+<center><br>    <img src="appclassloader.png"><br><br>    2.系统类加载器继承关系图<br></center>
+
+
+<blockquote>
+<h4 id="1-4-class加载过程"><a href="#1-4-class加载过程" class="headerlink" title="1.4 class加载过程"></a>1.4 class加载过程</h4><p><img src="class_process.jpg"><br></p>
+<p><strong>装载</strong>：通过类的全限定名获取二进制字节流，将二进制流转换成方法去中的运行时数据结构，在内存中生成java.lang.Class对象。</p>
+<p><strong>链接</strong>：</p>
+<blockquote>
+<ul>
+<li><strong>校验</strong>：检查导入类或接口的二进制数据的正确性（文件格式验证，元数据验证，字节码验证，符号引用验证）<br></li>
+<li><strong>准备</strong>：给类的静态变量分配并初始化存储空间 <br></li>
+<li><strong>解析</strong>：将常量池中的符号引用转换成直接引用 <br></li>
+</ul>
+</blockquote>
+<p><strong>初始化</strong>：激活类的静态变量,初始化代码块和静态代码块，并初始化程序设置的变量值。</p>
+<h6 id="1-4-1-类的主动使用"><a href="#1-4-1-类的主动使用" class="headerlink" title="1.4.1 类的主动使用"></a>1.4.1 类的主动使用</h6><ul>
+<li>创建类的实例</li>
+<li>访问某个类或接口的静态变量，或者对静态变量赋值</li>
+<li>调用某个类的静态方法</li>
+<li>发射( 如Class.forName(“”) )</li>
+<li>初始化一个类的子类</li>
+<li>Java虚拟机启动时被表明为启动类的类(Java Test)</li>
+</ul>
+<h6 id="1-4-2-分析Class-forName-和ClassLoader-loadClass"><a href="#1-4-2-分析Class-forName-和ClassLoader-loadClass" class="headerlink" title="1.4.2 分析Class.forName()和ClassLoader.loadClass()"></a>1.4.2 分析Class.forName()和ClassLoader.loadClass()</h6></blockquote>
+<ul>
+<li><p>Class.forName(className)方法，内部实际调用的方法是Class.forName(className,true,classLoader),第二个参数表示类是否需要初始化，Class.forName(className)默认是需要初始化。这表示会触发目标类的static变量和static代码块会被再次初始化。</p>
+</li>
+<li><p>ClassLoader.loadClass(className)方法，内部实际调用的是它的重载方法ClassLoader.loadClass(className,false);第二参数表示目标对象是否进行链接，false表示不进行链接，不链接就意味着不进行包括初始化等一系列步骤，所以静态变量和静态代码块就不会的到执行。</p>
+</li>
+</ul>
+<pre><code>javaagent除了做字节码上面的修改之外，其实还有一些小功能，有时候还是挺有用的
+获取所有已经被加载的类：Class[] getAllLoadedClasses();
+获取所有已经初始化了的类： Class[] getInitiatedClasses(ClassLoader loader);
+获取某个对象的大小： long getObjectSize(Object objectToSize);
+将某个jar加入到bootstrap classpath里优先其他jar被加载： void appendToBootstrapClassLoaderSearch(JarFile jarfile);
+将某个jar加入到classpath里供appclassloard去加载：void appendToSystemClassLoaderSearch(JarFile jarfile);
+设置某些native方法的前缀，主要在找native方法的时候做规则匹配： void setNativeMethodPrefix(ClassFileTransformer transformer, String prefix)。
+</code></pre>
     
 
     
@@ -508,19 +555,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/blog/2017/09/30/Java-ClassLoader/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/blog//blog2017/08/30/hello-world/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
