@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>时光-流沙</title>
+  
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="https://leejaywell.github.io/"/>
+  <updated>2017-09-30T06:51:19.645Z</updated>
+  <id>https://leejaywell.github.io/</id>
+  
+  <author>
+    <name>Lee</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java基础之ClassLoader</title>
+    <link href="https://leejaywell.github.io/2017/09/30/Java-ClassLoader/"/>
+    <id>https://leejaywell.github.io/2017/09/30/Java-ClassLoader/</id>
+    <published>2017-09-30T06:32:45.000Z</published>
+    <updated>2017-09-30T06:51:19.645Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<h2 id="Java基础之ClassLoader"><a href="#Java基础之ClassLoader" class="headerlink" title="Java基础之ClassLoader"></a>Java基础之ClassLoader</h2><h4 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h4><p>开发人员对Java.lang.ClassNotFoundExeption这个异常肯定都不陌生，想要详细了解和解决这个问题，<br>  这涉及到Java技术体系中的类加载技术。<br>Java的类加载机制是其体系中比较核心的部分，虽然和大部分开发人员直接打交道不多，但是对其背后的有一定的理解有助于排查程序中出现类加载失败等技术问题，对于理解Java虚拟机的连接模型和<br>  Java语言的动态性都有很大的帮助。</p>
+<h4 id="1-2-ClassLoader结构简述"><a href="#1-2-ClassLoader结构简述" class="headerlink" title="1.2 ClassLoader结构简述"></a>1.2 ClassLoader结构简述</h4><p>JVM中预定义了三种类加载器，当一个JVM实例启动的时候，JVM缺省开始使用如下三种类型的类加载器：</p>
+<blockquote>
+<p><strong>启动（Boostrap）类加载器</strong>：引导类装载器是由本地代码实现的类加载器，其负责<java_runtime_home>/lib下面的核心类库或者可以使用<br>    jvm参数-Xbootclasspath选项指定的jar包加载到内存中。<strong>由于引导类加载器涉及到虚拟机本地实现细节，<br>    开发者无法直接获取到启动类加载的引用，所以不允许直接引用进行操作。</strong><br><strong>扩展（Extension）类加载器</strong>：扩展类加载是由Sun的ExtClassLoader（Sun.misc.Launcher$ExtClassLoader）实现的。其负责<br>    将<java_runtime_home>/lib/ext或者由JVM参数-Djava.ext.dir指定位置中的类加载到内存中。开发者可以直接使用标准扩展类记载其。<br><strong>系统（System）类加载</strong>：系统类加载器是由Sun的AppClassLoader（Sun.misc.Launcher$AppClassLoader）是实现的。<br>    其负责将系统类路径java -classpath或-Djava.class.path变量所指的目录下的类库加载到内存中。开发者可以直接使用系统加载器。</java_runtime_home></java_runtime_home></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><strong><em>除了以上列举的三种类加载器，还有一种比较特殊的类型就是线程上下文类加载器</em></strong></li>
+</ul>
+<p><strong>关系图</strong></p>
+<center><br>    <img src="classloader-model.png" height="350" width="600"><br><br></center>
+
+
+<blockquote>
+<h4 id="1-3-ClassLoader加载机制"><a href="#1-3-ClassLoader加载机制" class="headerlink" title="1.3 ClassLoader加载机制"></a>1.3 ClassLoader加载机制</h4><p>JVM在加载类的时候默认是采用的是双亲委派机制，通俗的说，<strong>就是某个特定的类加载器在接到类加载的请求时，首先将加载的任务委托给父类加载器，依次类推，如果父类加载器可以完成类加载任务，就成功返回，如果父类加载器无法完成此加载任务时，才自己去加载。</strong> 对于这种加载机制，可以从系统类加载器和扩展类加载器为例简单分析：</p>
+</blockquote>
+<center><br>    <img src="extclassloader.png"><br><br>    1.扩展类加载器继承关系图<br></center>
+
+<center><br>    <img src="appclassloader.png"><br><br>    2.系统类加载器继承关系图<br></center>
+
+
+<blockquote>
+<h4 id="1-4-class加载过程"><a href="#1-4-class加载过程" class="headerlink" title="1.4 class加载过程"></a>1.4 class加载过程</h4><p><img src="class_process.jpg"><br></p>
+<p><strong>装载</strong>：通过类的全限定名获取二进制字节流，将二进制流转换成方法去中的运行时数据结构，在内存中生成java.lang.Class对象。</p>
+<p><strong>链接</strong>：</p>
+<blockquote>
+<ul>
+<li><strong>校验</strong>：检查导入类或接口的二进制数据的正确性（文件格式验证，元数据验证，字节码验证，符号引用验证）<br></li>
+<li><strong>准备</strong>：给类的静态变量分配并初始化存储空间 <br></li>
+<li><strong>解析</strong>：将常量池中的符号引用转换成直接引用 <br></li>
+</ul>
+</blockquote>
+<p><strong>初始化</strong>：激活类的静态变量,初始化代码块和静态代码块，并初始化程序设置的变量值。</p>
+<h6 id="1-4-1-类的主动使用"><a href="#1-4-1-类的主动使用" class="headerlink" title="1.4.1 类的主动使用"></a>1.4.1 类的主动使用</h6><ul>
+<li>创建类的实例</li>
+<li>访问某个类或接口的静态变量，或者对静态变量赋值</li>
+<li>调用某个类的静态方法</li>
+<li>发射( 如Class.forName(“”) )</li>
+<li>初始化一个类的子类</li>
+<li>Java虚拟机启动时被表明为启动类的类(Java Test)</li>
+</ul>
+<h6 id="1-4-2-分析Class-forName-和ClassLoader-loadClass"><a href="#1-4-2-分析Class-forName-和ClassLoader-loadClass" class="headerlink" title="1.4.2 分析Class.forName()和ClassLoader.loadClass()"></a>1.4.2 分析Class.forName()和ClassLoader.loadClass()</h6></blockquote>
+<ul>
+<li><p>Class.forName(className)方法，内部实际调用的方法是Class.forName(className,true,classLoader),第二个参数表示类是否需要初始化，Class.forName(className)默认是需要初始化。这表示会触发目标类的static变量和static代码块会被再次初始化。</p>
+</li>
+<li><p>ClassLoader.loadClass(className)方法，内部实际调用的是它的重载方法ClassLoader.loadClass(className,false);第二参数表示目标对象是否进行链接，false表示不进行链接，不链接就意味着不进行包括初始化等一系列步骤，所以静态变量和静态代码块就不会的到执行。</p>
+</li>
+</ul>
+<pre><code>javaagent除了做字节码上面的修改之外，其实还有一些小功能，有时候还是挺有用的
+获取所有已经被加载的类：Class[] getAllLoadedClasses();
+获取所有已经初始化了的类： Class[] getInitiatedClasses(ClassLoader loader);
+获取某个对象的大小： long getObjectSize(Object objectToSize);
+将某个jar加入到bootstrap classpath里优先其他jar被加载： void appendToBootstrapClassLoaderSearch(JarFile jarfile);
+将某个jar加入到classpath里供appclassloard去加载：void appendToSystemClassLoaderSearch(JarFile jarfile);
+设置某些native方法的前缀，主要在找native方法的时候做规则匹配： void setNativeMethodPrefix(ClassFileTransformer transformer, String prefix)。
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;h2 id=&quot;Java基础之ClassLoader&quot;&gt;&lt;a href=&quot;#Java基础之ClassLoader&quot; class=&quot;headerlink&quot; title=&quot;Java基础之ClassLoader&quot;&gt;&lt;/a&gt;Java基础之ClassLoader&lt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://leejaywell.github.io/2017/08/30/hello-world/"/>
+    <id>https://leejaywell.github.io/2017/08/30/hello-world/</id>
+    <published>2017-08-30T01:12:05.732Z</published>
+    <updated>2017-09-30T06:51:08.757Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h4 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h4><h6 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h6 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h6 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h6 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
