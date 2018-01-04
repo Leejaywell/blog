@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="9月 30, 2017" />
-        <meta property="article:modified_time" content="1月 02, 2018" />
+        <meta property="article:modified_time" content="1月 04, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "Java基础之ClassLoader",
     "url": "https://leejaywell.github.io/blog/blog/2017/09/30/Java-ClassLoader/index.html",
     "datePublished": "9月 30, 2017",
-    "dateModified": "1月 02, 2018",
+    "dateModified": "1月 04, 2018",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -327,7 +327,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Java基础之ClassLoader"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java基础之ClassLoader</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-简介"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">1.1 简介</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-常见异常"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">1.2 常见异常</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-class加载过程"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">1.3 class加载过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-3-1-类的主动使用"><span class="post-toc-number">1.0.3.0.1.</span> <span class="post-toc-text">1.3.1 类的主动使用</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-3-2-分析Class-forName-和ClassLoader-loadClass"><span class="post-toc-number">1.0.3.0.2.</span> <span class="post-toc-text">1.3.2 分析Class.forName()和ClassLoader.loadClass()</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-ClassLoader结构简述"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">1.4 ClassLoader结构简述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-5-ClassLoader加载机制"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">1.5 ClassLoader加载机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-6-热加载"><span class="post-toc-number">1.0.6.</span> <span class="post-toc-text">1.6 热加载</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Java基础之ClassLoader"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java基础之ClassLoader</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-简介"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">1.1 简介</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-常见异常"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">1.2 常见异常</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-class加载过程"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">1.3 class加载过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-3-1-类的主动使用"><span class="post-toc-number">1.0.3.0.1.</span> <span class="post-toc-text">1.3.1 类的主动使用</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-3-2-分析Class-forName-和ClassLoader-loadClass"><span class="post-toc-number">1.0.3.0.2.</span> <span class="post-toc-text">1.3.2 分析Class.forName()和ClassLoader.loadClass()</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-ClassLoader结构简述"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">1.4 ClassLoader结构简述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-5-ClassLoader加载机制"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">1.5 ClassLoader加载机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-6-类加载器的并行加载和单例模式"><span class="post-toc-number">1.0.6.</span> <span class="post-toc-text">1.6 类加载器的并行加载和单例模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-7-热加载"><span class="post-toc-number">1.0.7.</span> <span class="post-toc-text">1.7 热加载</span></a></li></ol></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -536,9 +536,9 @@
 
 <center><br>    <img src="appclassloader.png"><br><br>    2.系统类加载器继承关系图<br></center>
 
-
 <blockquote>
-<h4 id="1-6-热加载"><a href="#1-6-热加载" class="headerlink" title="1.6 热加载"></a>1.6 热加载</h4><p>  在 Java 开发领域，热加载一直是一个难以解决的问题，从JDK1.4提供的技术，运行开发人员在debug过程中能够立即重载修改后的class。所有的IDE都支持这个特性（Intellij IDEA，Eclipse，NetBeans)。如果debug应用，并且修改了某些class，jvm会立即载入修改后的class。同样，这个技术也有限制：只允许修改方法体，不允许增加新的class、不允许新增字段、不允许新增方法、不允许修改方法签名。对于整个类的结构修改，仍然需要重启虚拟机，对类重新加载才能完成更新操作。对于某些大型的应用来说，每次的重启都需要花费大量的时间成本。</p>
+<h4 id="1-6-类加载器的并行加载和单例模式"><a href="#1-6-类加载器的并行加载和单例模式" class="headerlink" title="1.6 类加载器的并行加载和单例模式"></a>1.6 类加载器的并行加载和单例模式</h4><p> 其实都是通过定义静态的成员变量，以保证instance可以在类初始化的时候被实例化。那为啥让instance在类初始化的时候被实例化就能保证线程安全了呢？因为类的初始化是由ClassLoader完成的，这其实就是利用了ClassLoader的线程安全机制啊。再说静态内部类，这种方式和饿汉方式只有细微差别，只是做法上稍微优雅一点。这种方式是Singleton类被装载了，instance不一定被初始化。因为SingletonHolder类没有被主动使用，只有显示通过调用getInstance方法时，才会显示装载SingletonHolder类，从而实例化instance。但是，原理和饿汉一样。</p>
+<h4 id="1-7-热加载"><a href="#1-7-热加载" class="headerlink" title="1.7 热加载"></a>1.7 热加载</h4><p>  在 Java 开发领域，热加载一直是一个难以解决的问题，从JDK1.4提供的技术，运行开发人员在debug过程中能够立即重载修改后的class。所有的IDE都支持这个特性（Intellij IDEA，Eclipse，NetBeans)。如果debug应用，并且修改了某些class，jvm会立即载入修改后的class。同样，这个技术也有限制：只允许修改方法体，不允许增加新的class、不允许新增字段、不允许新增方法、不允许修改方法签名。对于整个类的结构修改，仍然需要重启虚拟机，对类重新加载才能完成更新操作。对于某些大型的应用来说，每次的重启都需要花费大量的时间成本。</p>
 </blockquote>
 <p>  <strong>什么是热加载</strong></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">在不重启 Java 虚拟机的前提下，能自动侦测到 class 文件的变化，更新运行时 class 的行为。</div><div class="line">Java 类是通过 Java 虚拟机加载的，某个类的 class 文件在被 classloader 加载后，会生成对应的 Class 对象，之后就可以创建该类的实例</div></pre></td></tr></table></figure>

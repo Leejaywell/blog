@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://leejaywell.github.io/blog/"/>
-  <updated>2018-01-02T02:01:44.644Z</updated>
+  <updated>2018-01-04T07:20:39.784Z</updated>
   <id>https://leejaywell.github.io/blog/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://leejaywell.github.io/blog/2017/09/30/Java-ClassLoader/"/>
     <id>https://leejaywell.github.io/blog/2017/09/30/Java-ClassLoader/</id>
     <published>2017-09-30T06:32:45.000Z</published>
-    <updated>2018-01-02T02:01:44.644Z</updated>
+    <updated>2018-01-04T07:20:39.784Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <h2 id="Java基础之ClassLoader"><a href="#Java基础之ClassLoader" class="headerlink" title="Java基础之ClassLoader"></a>Java基础之ClassLoader</h2><h4 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h4><p>开发人员对Java.lang.ClassNotFoundExeption这个异常肯定都不陌生，想要详细了解和解决这个问题，<br>  这涉及到Java技术体系中的类加载技术。<br>Java的类加载机制是其体系中比较核心的部分，虽然和大部分开发人员直接打交道不多，但是对其背后的有一定的理解有助于排查程序中出现类加载失败等技术问题，对于理解Java虚拟机的连接模型和<br>  Java语言的动态性都有很大的帮助。</p>
@@ -78,9 +78,9 @@
 
 <center><br>    <img src="appclassloader.png"><br><br>    2.系统类加载器继承关系图<br></center>
 
-
 <blockquote>
-<h4 id="1-6-热加载"><a href="#1-6-热加载" class="headerlink" title="1.6 热加载"></a>1.6 热加载</h4><p>  在 Java 开发领域，热加载一直是一个难以解决的问题，从JDK1.4提供的技术，运行开发人员在debug过程中能够立即重载修改后的class。所有的IDE都支持这个特性（Intellij IDEA，Eclipse，NetBeans)。如果debug应用，并且修改了某些class，jvm会立即载入修改后的class。同样，这个技术也有限制：只允许修改方法体，不允许增加新的class、不允许新增字段、不允许新增方法、不允许修改方法签名。对于整个类的结构修改，仍然需要重启虚拟机，对类重新加载才能完成更新操作。对于某些大型的应用来说，每次的重启都需要花费大量的时间成本。</p>
+<h4 id="1-6-类加载器的并行加载和单例模式"><a href="#1-6-类加载器的并行加载和单例模式" class="headerlink" title="1.6 类加载器的并行加载和单例模式"></a>1.6 类加载器的并行加载和单例模式</h4><p> 其实都是通过定义静态的成员变量，以保证instance可以在类初始化的时候被实例化。那为啥让instance在类初始化的时候被实例化就能保证线程安全了呢？因为类的初始化是由ClassLoader完成的，这其实就是利用了ClassLoader的线程安全机制啊。再说静态内部类，这种方式和饿汉方式只有细微差别，只是做法上稍微优雅一点。这种方式是Singleton类被装载了，instance不一定被初始化。因为SingletonHolder类没有被主动使用，只有显示通过调用getInstance方法时，才会显示装载SingletonHolder类，从而实例化instance。但是，原理和饿汉一样。</p>
+<h4 id="1-7-热加载"><a href="#1-7-热加载" class="headerlink" title="1.7 热加载"></a>1.7 热加载</h4><p>  在 Java 开发领域，热加载一直是一个难以解决的问题，从JDK1.4提供的技术，运行开发人员在debug过程中能够立即重载修改后的class。所有的IDE都支持这个特性（Intellij IDEA，Eclipse，NetBeans)。如果debug应用，并且修改了某些class，jvm会立即载入修改后的class。同样，这个技术也有限制：只允许修改方法体，不允许增加新的class、不允许新增字段、不允许新增方法、不允许修改方法签名。对于整个类的结构修改，仍然需要重启虚拟机，对类重新加载才能完成更新操作。对于某些大型的应用来说，每次的重启都需要花费大量的时间成本。</p>
 </blockquote>
 <p>  <strong>什么是热加载</strong></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">在不重启 Java 虚拟机的前提下，能自动侦测到 class 文件的变化，更新运行时 class 的行为。</div><div class="line">Java 类是通过 Java 虚拟机加载的，某个类的 class 文件在被 classloader 加载后，会生成对应的 Class 对象，之后就可以创建该类的实例</div></pre></td></tr></table></figure>
