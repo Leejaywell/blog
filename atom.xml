@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://leejaywell.github.io/blog/"/>
-  <updated>2018-06-04T06:52:21.246Z</updated>
+  <updated>2018-06-04T07:14:33.950Z</updated>
   <id>https://leejaywell.github.io/blog/</id>
   
   <author>
@@ -20,9 +20,18 @@
     <link href="https://leejaywell.github.io/blog/2018/06/04/Music/"/>
     <id>https://leejaywell.github.io/blog/2018/06/04/Music/</id>
     <published>2018-06-04T06:52:21.000Z</published>
-    <updated>2018-06-04T06:52:21.246Z</updated>
+    <updated>2018-06-04T07:14:33.950Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>云烟成雨</p>
+<html><br><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=542060897&auto=1&height=66"><br></iframe><br></html></blockquote>
+]]></content>
     
     <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;云烟成雨&lt;/p&gt;
+&lt;html&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music
     
     </summary>
     
