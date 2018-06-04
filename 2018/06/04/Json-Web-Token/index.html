@@ -12,6 +12,8 @@
     
     <title>
         
+            Json Web Token | 
+        
         时光-流沙
     </title>
 
@@ -63,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://leejaywell.github.io/blog">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="时光-流沙">
+    <meta property="og:title" content="Json Web Token | 时光-流沙">
     <meta property="og:image" content="/blog/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="6月 04, 2018" />
+        <meta property="article:modified_time" content="6月 04, 2018" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="时光-流沙">
+    <meta name="twitter:title" content="Json Web Token | 时光-流沙">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/blog/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -79,35 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://leejaywell.github.io/blog" />
+        <link rel="canonical" href="https://leejaywell.github.io/blog/blog/2018/06/04/Json-Web-Token/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
+
+
 <script type="application/ld+json">
 {
-    "@context": "http://schema.org",
-    "@type": "Website",
+    "@context": "https://schema.org",
+    "@type": "Article",
     "publisher": {
         "@type": "Organization",
         "name": "时光-流沙",
         "logo": "/blog/img/favicon.png"
     },
-    "url": "https://leejaywell.github.io/blog/blog/index.html",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/blog/img/favicon.png"
+    "author": {
+        "@type": "Person",
+        "name": "Lee",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/blog/img/favicon.png"
+        },
+        "description": "Hi, nice to meet you"
     },
+    "headline": "Json Web Token",
+    "url": "https://leejaywell.github.io/blog/blog/2018/06/04/Json-Web-Token/index.html",
+    "datePublished": "6月 04, 2018",
+    "dateModified": "6月 04, 2018",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://leejaywell.github.io/blog"
-    },
-    "description": ""
+    }
 }
 </script>
-
-
 
 
     
@@ -287,349 +300,245 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
+                    <!-- Post TOC -->
+
     
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
-
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/blog/img/daily_pic.png)">
-        <p class="index-top-block-slogan"><a href="#">
-        
-            
-                Hi, nice to meet you
-            
-        
-        </a></p>
-    </div>
-
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="/blog/img/avatar.png" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>Lee</strong>
-        </div>
-    </div>
-</div>
-
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
-    
-    <!-- Google -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
-        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-        </label>
-
-        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
-            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
-            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-
-            <input type="hidden" name="sitesearch" value="https://leejaywell.github.io/blog">
-        </form>
-    </div>
-
-
-
-
-
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="#" target="_blank">
-            <img src="/blog/img/logo.png" alt="logo" />
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
         </a>
     </div>
+    -->
 
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>时光-流沙</strong>
-        </div>
-        <div class="section-spacer"></div>
-
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-                <a class="index_share-link" href="/blog/about" title="About Me">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        About Me
-                    </li>
-                </a>
-            
-                <a class="index_share-link" href="/blog/timeline" title="Timeline">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        Timeline
-                    </li>
-                </a>
-            
-        </ul>
-
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=时光-流沙&url=https://leejaywell.github.io/blog/blog/&pic=&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
-                    </li>
-                </a>
-            
-
-            
-
-            
-
-            
-
-            
-                <a class="index_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://leejaywell.github.io/blog/blog/&title=时光-流沙" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 LinkedIn
-                    </li>
-                </a>
-            
-
-            
-                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=时光-流沙&title=时光-流沙&summary=&pics=https://leejaywell.github.io/blog/blog/img/favicon.png&url=https://leejaywell.github.io/blog/blog/" target="_blank">
-                    <li class="mdl-menu__item">
-                        分享到 QQ
-                    </li>
-                </a>
-            
-
-            
-        </ul>
-    </div>
-</div>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
 
     
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-定义"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-JWT的结构"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. JWT的结构</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-Header"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 Header</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-Payload"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 Payload</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-Signature"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3 Signature</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-使用场景"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 使用场景</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-实例场景"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">3.1 实例场景</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-登陆场景"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">3.2 登陆场景</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2018/06/04/Json-Web-Token/">Json Web Token</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            1. 定义...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/blog/2018/06/04/Json-Web-Token/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/blog/img/avatar.png" width="44px" height="44px" alt="Lee's avatar">
-            </div>
-            <div>
-                <strong>Lee</strong>
-                <span>6月 04, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2017/09/30/Java-ClassLoader/">Java基础之ClassLoader</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/blog/2017/09/30/Java-ClassLoader/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/blog/img/avatar.png" width="44px" height="44px" alt="Lee's avatar">
-            </div>
-            <div>
-                <strong>Lee</strong>
-                <span>9月 30, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2017/08/30/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/blog/2017/08/30/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/blog/img/avatar.png" width="44px" height="44px" alt="Lee's avatar">
-            </div>
-            <div>
-                <strong>Lee</strong>
-                <span>8月 30, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/blog/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/blog/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Json Web Token
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/blog/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Lee</strong>
+        <span>6月 04, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1ElEQVR42u3aUU7EMAwFwL3/peEAqMuzXUQ3nn6tRCGZIGH8nNfXyueFjY2NjY2NjY2N/Uj2K36u3r9cJniz+tN6e8bGxsbewP7lT3+wZIK5ejPZSf7m5VrY2NjYC9i97Sbl8OdXf9liUPbKe8bGxsbGLhaweesy+fnY2NjY2Mm//vM2pofHxsbGxp5sPW8qqvF9Hh79Q5aGjY2N/Xh2ddD7hM//MN/GxsbGfiS7+ryP++8aLVQDqWjn2NjY2Ieyc0av8UhgvePOFdjY2Njb2JOSlkRR869Woy5sbGzsDexeZF/9nI9y5y0QNjY29h52r0nojX57bUz14iY2Njb2TnZvJJAUp+p3VeOt/JiwsbGxz2ZXh6nVkpNcAEoalfxSETY2NvYedjVIytm9EL83EojaJ2xsbOyj2dWY/q74KTmy6sWgy3WxsbGxl7ETWPXNBJaXpfIvDBsbG/tQdhLf92Km/JjKpag19MXGxsbewE6Gu0npql7TyYfK+SAZGxsbew+72iTkl3iSazrJEVTblcs9Y2NjYy9jzxdOtnVXIBWNhLGxsbEXsJOCVL3uc9dIIB8nlwsYNjY29qHsXvSTjBDuWiU/dGxsbOwN7El7kJfDfMVqMzO6qYSNjY19BLs6ZH3fuvSiqHsHAzcMerGxsbE/hJ0A3hekXlifR1rJZZ1oh9jY2NhHs/Novhrc5zFTb3hcCJuwsbGxD2VPWoXm8kGZnLQ65VAJGxsb+8PZfxEwVZuNvJmptiXY2NjY29jV5qEaMPWOcl5KsbGxsc9m9+L4/CJO7wJQ9cpOc76NjY2NfRC7V7TmYVA+sp0UNmxsbOw97EnQn0f/vUCqV2KxsbGxsXtBUrXUTQbDN7Qi2NjY2CvZ0TKt6zv3joexsbGxt7Hz0lIN9PMVX+MHGxsbeyd7EuJXMaNrN3GM9SfzbWxsbOxHsvc82NjY2NjY2NjY2I95vgHxKypcfBNZzgAAAABJRU5ErkJggg==">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Json Web Token&url=https://leejaywell.github.io/blog/blog/2018/06/04/Json-Web-Token/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://leejaywell.github.io/blog/blog/2018/06/04/Json-Web-Token/index.html&title=Json Web Token" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=时光-流沙&title=Json Web Token&summary=&pics=https://leejaywell.github.io/blog/blog/img/favicon.png&url=https://leejaywell.github.io/blog/blog/2018/06/04/Json-Web-Token/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h3><p>JWT是一种用于双方之间传递安全信息的简洁的、URL安全的表述性声明规范。JWT作为一个开放的标准（RFC 7519），定义了一种简洁的，自包含的方法用于通信双方之间以Json对象的形式安全的传递信息。因为数字签名的存在，这些信息是可信的，JWT可以使用HMAC算法或者是RSA的公私秘钥对进行签名。简洁(Compact): 可以通过URL，POST参数或者在HTTP header发送，因为数据量小，传输速度也很快自包含(Self-contained)：负载中包含了所有用户所需要的信息，避免了多次查询数据库。</p>
+<h3 id="2-JWT的结构"><a href="#2-JWT的结构" class="headerlink" title="2. JWT的结构"></a>2. JWT的结构</h3><p>JWT包含了使用.分隔的三部分：<br>Header 头部<br>Payload 负载<br>Signature 签名</p>
+<p>结构看起来是这样的Header.Payload.Signature</p>
+<p><img src="jwt.png" alt="Json-Web-Toekn\jwt"></p>
+<h4 id="2-1-Header"><a href="#2-1-Header" class="headerlink" title="2.1 Header"></a>2.1 Header</h4><p>header中通常包含了两部分：token类型和采用的加密算法。{ “alg”: “HS256”, “typ”: “JWT”}<br>这部分内容使用<strong>Base64Url</strong>编码组成了JWT结构的第一部分。</p>
+<h4 id="2-2-Payload"><a href="#2-2-Payload" class="headerlink" title="2.2 Payload"></a>2.2 Payload</h4><p>Token的第二部分是负载，它包含了claim，Claim是一些实体（通常指的用户）的状态和额外的元数据，有三种类型的claim：<em>reserved</em>, <em>public</em> 和 <em>private</em>.<strong>Reserved claims</strong>: 这些claim是JWT预先定义的，在JWT中并不会强制使用它们，而是推荐使用，常用的有 iss（签发者）,exp（过期时间戳）, sub（面向的用户）, aud（接收方）, iat（签发时间）。<br><strong>Public claims</strong>：根据需要定义自己的字段，注意应该避免冲突<br><strong>Private claims</strong>：这些是自定义的字段，可以用来在双方之间交换信息<br>负载使用的例子：{ “sub”: “1234567890”, “name”: “John Doe”, “admin”: true}</p>
+<p>负载需要经过<strong>Base64Url</strong>编码后作为JWT结构的第二部分。</p>
+<h4 id="2-3-Signature"><a href="#2-3-Signature" class="headerlink" title="2.3 Signature"></a>2.3 Signature</h4><p>创建签名需要使用编码后的header和payload以及一个秘钥，使用header中指定签名算法进行签名。例如如果希望使用HMAC SHA256算法，那么签名应该使用下列方式创建：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">HMACSHA256(</div><div class="line">  base64UrlEncode(header) + &quot;.&quot; +</div><div class="line">  base64UrlEncode(payload),</div><div class="line">  secret)</div></pre></td></tr></table></figure>
+<h3 id="3-使用场景"><a href="#3-使用场景" class="headerlink" title="3. 使用场景"></a>3. 使用场景</h3><blockquote>
+<p>1、用于向Web应用传递一些非敏感信息。例如完成加好友、下订单的操作等等。</p>
+<p>2、用于设计用户认证和授权系统。</p>
+<p>3、实现Web应用的单点登录。</p>
+</blockquote>
+<h4 id="3-1-实例场景"><a href="#3-1-实例场景" class="headerlink" title="3.1 实例场景"></a>3.1 实例场景</h4><p>在A用户关注了B用户的时候，系统发邮件给B用户，并且附有一个链接“点此关注A用户”。链接的地址：</p>
+<p><a href="https://your.awesome-app.com/make-friend/?from_user=B&amp;target_user=A" target="_blank" rel="external">https://your.awesome-app.com/make-friend/?from_user=B&amp;target_user=A</a></p>
+<p>让B用户不用登录就可以完成这个操作。</p>
+<h4 id="3-2-登陆场景"><a href="#3-2-登陆场景" class="headerlink" title="3.2 登陆场景"></a>3.2 登陆场景</h4><p>在传统的用户登录认证中，因为http是无状态的，所以都是采用session方式。用户登录成功，服务端会保证一个session，当然会给客户端一个sessionId，客户端会把sessionId保存在cookie中，每次请求都会携带这个sessionId。</p>
+<p><img src="sesseion login.jpg" alt="Json-Web-Toekn\sesseion login"></p>
+<p>cookie+session这种模式通常是保存在内存中，而且服务从单服务到多服务会面临的session共享问题，随着用户量的增多，开销就会越大。而JWT不是这样的，只需要服务端生成token，客户端保存这个token，每次请求携带这个token，服务端认证解析就可。</p>
+<p><img src="jwt login.jpg" alt="Json-Web-Toekn\jwt login"></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/blog/2017/09/30/Java-ClassLoader/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -938,12 +847,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-
-    <!-- Swiftye -->
-    
-
-    <!-- Local Search-->
-    
 
 
 <!-- UC Browser Compatible -->
