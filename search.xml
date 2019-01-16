@@ -37,6 +37,10 @@
 <p><img src="sesseion login.jpg" alt="Json-Web-Toekn\sesseion login"></p>
 <p>cookie+session这种模式通常是保存在内存中，而且服务从单服务到多服务会面临的session共享问题，随着用户量的增多，开销就会越大。而JWT不是这样的，只需要服务端生成token，客户端保存这个token，每次请求携带这个token，服务端认证解析就可。</p>
 <p><img src="jwt login.jpg" alt="Json-Web-Toekn\jwt login"></p>
+<h4 id="4-JWT问题"><a href="#4-JWT问题" class="headerlink" title="4 JWT问题"></a>4 JWT问题</h4><blockquote>
+<p>1、JWT的最大缺点是服务器不保存会话状态，所以在使用期间不可能取消令牌或更改令牌的权限。也就是说，一旦JWT签发，在有效期内将会一直有效。</p>
+<p>2、JWT本身包含认证信息，因此一旦信息泄露，任何人都可以获得令牌的所有权限。为了减少盗用，JWT的有效期不宜设置太长。对于某些重要操作，用户在使用时应该每次都进行进行身份验证。</p>
+</blockquote>
 ]]></content>
       
         
